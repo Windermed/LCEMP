@@ -26,6 +26,8 @@ void CConsoleMinecraftApp::StoreLaunchData()
 }
 void CConsoleMinecraftApp::ExitGame()
 {
+	extern HWND g_hWnd;
+	PostMessage(g_hWnd, WM_CLOSE, 0, 0);
 }
 void CConsoleMinecraftApp::FatalLoadError()
 {
